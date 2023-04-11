@@ -68,12 +68,17 @@ class ListIterator implements Iterator
         return $this->position < $this->list->count();
     }
 
+    public function reset():void
+    {
+        $this->position = 0;
+    }
+
     /**
      * @inheritDoc
      */
     public function rewind(): void
     {
-        $this->position = 0;
+        $this->reset();
         $this->values = $this->list->toArray();
     }
 }

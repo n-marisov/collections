@@ -20,7 +20,7 @@ interface SetInterface extends ArrayAccess, IteratorAggregate, Countable, Collec
      * @param mixed ...$values
      * @return bool
      */
-    public function has( ...$values ): bool;
+    public function contains(...$values ): bool;
 
     /**
      * Удаляет те элементы которые присутствуют в коллекции

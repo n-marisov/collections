@@ -44,7 +44,7 @@ interface ListInterface extends CollectionInterface
      * @param mixed $value
      * @return bool
      */
-    public function exist( mixed $value ):bool;
+    public function contains(mixed $value ):bool;
 
     /**
      * Приводит объект к объекту SetInterface

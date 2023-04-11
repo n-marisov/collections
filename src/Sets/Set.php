@@ -25,7 +25,11 @@ class Set extends AbstractCollection implements SetInterface
         return $this;
     }
 
+<<<<<<< HEAD
     public function has( ...$values ): bool
+=======
+    public function contains(...$values ): bool
+>>>>>>> 5c65f25 (Добавлены диапазоны)
     {
         if(empty($values)) return false;
         foreach ($values as $value)
@@ -37,7 +41,11 @@ class Set extends AbstractCollection implements SetInterface
     public function delete(...$values): static
     {
         foreach ($values as $key => $value)
+<<<<<<< HEAD
             if($this->has($value)){
+=======
+            if($this->contains($value)){
+>>>>>>> 5c65f25 (Добавлены диапазоны)
                 $this->count--;
                 unset($this->values[ $key ]);
             }
@@ -60,7 +68,11 @@ class Set extends AbstractCollection implements SetInterface
 
     public function offsetSet(mixed $offset, mixed $value): void
     {
+<<<<<<< HEAD
         if(!$this->has($value))
+=======
+        if(!$this->contains($value))
+>>>>>>> 5c65f25 (Добавлены диапазоны)
             $this->values[] = $value;
     }
 
