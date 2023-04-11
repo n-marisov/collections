@@ -1,0 +1,30 @@
+{
+  "name": "maris/collections",
+  "description": "Набор масиво-подобных объектов.",
+  "license": "MIT",
+  "type": "library",
+  "version": "1.0.0",
+  "authors": [
+    {
+      "name": "Марисов Николай Андреевич",
+      "email": "marisov123456789@mail.ru"
+    }
+  ],
+  "require": {
+    "php": ">=8.1"
+  },
+  "require-dev": {
+    "symfony/var-dumper": "*",
+    "phpunit/phpunit": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Maris\\Collection\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Maris\\Collection\\Tests\\": "tests/"
+    }
+  }
+}
