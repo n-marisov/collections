@@ -15,7 +15,7 @@ class PointerClassMap extends Map
     public function offsetSet(mixed $offset, mixed $value): void
     {
         if(is_string( $value ) && class_exists( $value ))
-            parent::offsetSet( $offset , $value);
+            parent::offsetSet( $offset , $value );
     }
 
 }
