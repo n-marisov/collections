@@ -102,11 +102,11 @@ Maris\Collection\MutableList Object
 
 ```php
 echo "Элемент который присутствует в листе. \n";
-var_dump($list->contains("test_unshift_2"));
+var_dump($list->exist("test_unshift_2"));
 echo "\n\n";
 
 echo "Элемент в листе отсутствует. \n";
-var_dump($list->contains("not_element"));
+var_dump($list->exist("not_element"));
 echo "\n\n";
 
 ```
