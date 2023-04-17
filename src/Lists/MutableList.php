@@ -2,10 +2,8 @@
 
 namespace Maris\Collection\Lists;
 
-<<<<<<< HEAD
+
 use Iterator;
-=======
->>>>>>> 5c65f25 (Добавлены диапазоны)
 use Maris\Collection\AbstractCollection;
 use Maris\Collection\Interfaces\ListInterface;
 use Maris\Collection\Interfaces\MapInterface;
@@ -17,16 +15,12 @@ use Traversable;
 
 class MutableList extends AbstractCollection implements ListInterface
 {
-<<<<<<< HEAD
-    protected Iterator $iterator;
 
     public function __construct()
     {
         $this->iterator = new ListIterator( $this );
     }
 
-=======
->>>>>>> 5c65f25 (Добавлены диапазоны)
     /**
      * @inheritDoc
      */
@@ -74,11 +68,7 @@ class MutableList extends AbstractCollection implements ListInterface
     /**
      * @inheritDoc
      */
-<<<<<<< HEAD
-    public function exist(mixed $value): bool
-=======
     public function contains(mixed $value): bool
->>>>>>> 5c65f25 (Добавлены диапазоны)
     {
         return in_array( $value, $this->values,true );
     }
@@ -104,11 +94,7 @@ class MutableList extends AbstractCollection implements ListInterface
      */
     public function getIterator(): Traversable
     {
-<<<<<<< HEAD
-        return $this->iterator;
-=======
         return new ListIterator($this);
->>>>>>> 5c65f25 (Добавлены диапазоны)
     }
 
     /**
@@ -127,8 +113,6 @@ class MutableList extends AbstractCollection implements ListInterface
         }
     }
 
-<<<<<<< HEAD
-=======
     /**
      * Применяет пользовательскую функцию к каждому значению листа
      * @param callable( mixed $value, int $positin):mixed $callback
@@ -159,6 +143,4 @@ class MutableList extends AbstractCollection implements ListInterface
         $this->count = count( $this->values );
         return $this;
     }
->>>>>>> 5c65f25 (Добавлены диапазоны)
-
 }

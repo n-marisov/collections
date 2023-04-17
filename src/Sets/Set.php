@@ -20,20 +20,17 @@ class Set extends AbstractCollection implements SetInterface
     public function add(...$values): static
     {
         foreach ($values as $value)
-            if(!in_array($value,$this->values,true))
+            if (!in_array($value, $this->values, true))
                 $this->values[] = $value;
         return $this;
     }
 
-<<<<<<< HEAD
-    public function has( ...$values ): bool
-=======
+
     public function contains(...$values ): bool
->>>>>>> 5c65f25 (Добавлены диапазоны)
     {
-        if(empty($values)) return false;
+        if (empty($values)) return false;
         foreach ($values as $value)
-            if(!in_array($value,$this->values,true))
+            if (!in_array($value, $this->values, true))
                 return false;
         return true;
     }
@@ -41,24 +38,19 @@ class Set extends AbstractCollection implements SetInterface
     public function delete(...$values): static
     {
         foreach ($values as $key => $value)
-<<<<<<< HEAD
-            if($this->has($value)){
-=======
             if($this->contains($value)){
->>>>>>> 5c65f25 (Добавлены диапазоны)
                 $this->count--;
-                unset($this->values[ $key ]);
+                unset($this->values[$key]);
             }
-        $this->values = array_values($this->values);
-        return $this;
+            $this->values = array_values($this->values);
+            return $this;
     }
-
     public function toMap(): MapInterface
     {
-        $map = new Map();
-        foreach ($this->values as $key => $value)
-            $map->set( $key, $value );
-        return $map;
+            $map = new Map();
+            foreach ($this->values as $key => $value)
+                $map->set($key, $value);
+            return $map;
     }
 
     public function toList(): ListInterface
@@ -68,13 +60,7 @@ class Set extends AbstractCollection implements SetInterface
 
     public function offsetSet(mixed $offset, mixed $value): void
     {
-<<<<<<< HEAD
-        if(!$this->has($value))
-=======
-        if(!$this->contains($value))
->>>>>>> 5c65f25 (Добавлены диапазоны)
+        if (!$this->contains($value))
             $this->values[] = $value;
     }
-
-
 }
