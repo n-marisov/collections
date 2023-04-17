@@ -5,7 +5,7 @@ namespace Maris\Collection\Maps;
 /***
  * Карта в которой все ключи являются названиями класса
  */
-class PointerClassMap extends \Maris\Collection\Map
+class PointerClassMap extends Map
 {
     /**
      * @param class-string $offset
