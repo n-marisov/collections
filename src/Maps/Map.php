@@ -139,6 +139,11 @@ class Map extends AbstractCollection implements MapInterface
         }
     }
 
+    public function offsetGet(mixed $offset): mixed
+    {
+        return $this->get($offset);
+    }
+
     /**
      * @inheritDoc
      */
