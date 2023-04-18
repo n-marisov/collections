@@ -3,7 +3,6 @@
 namespace Maris\Collection\Lists;
 
 
-use Iterator;
 use Maris\Collection\AbstractCollection;
 use Maris\Collection\Interfaces\ListInterface;
 use Maris\Collection\Interfaces\MapInterface;
@@ -15,12 +14,6 @@ use Traversable;
 
 class MutableList extends AbstractCollection implements ListInterface
 {
-
-    public function __construct()
-    {
-        $this->iterator = new ListIterator( $this );
-    }
-
     /**
      * @inheritDoc
      */
